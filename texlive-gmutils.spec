@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 Miscellaneous macros used by others of the author's packages.
@@ -28,20 +26,12 @@ and \@ifXeTeX; \(Re)storeMacro(s) to override redefinitions;
 environment" or redefinition of \begin (\begin* doesn't check
 if the argument environment is defined).
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -62,7 +52,6 @@ if the argument environment is defined).
 %{_texmfdistdir}/tex/latex/gmutils/gmutils.sty
 %doc %{_texmfdistdir}/doc/latex/gmutils/README
 %doc %{_texmfdistdir}/doc/latex/gmutils/gmutils.pdf
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -73,5 +62,3 @@ if the argument environment is defined).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

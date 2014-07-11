@@ -6,7 +6,7 @@
 # catalog-version v0.996
 Name:		texlive-gmutils
 Version:	v0.996
-Release:	7
+Release:	8
 Summary:	Support macros for other packages
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gmutils

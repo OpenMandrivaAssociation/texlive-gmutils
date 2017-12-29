@@ -1,12 +1,6 @@
-# revision 24287
-# category Package
-# catalog-ctan /macros/latex/contrib/gmutils
-# catalog-date 2011-10-14 16:42:22 +0200
-# catalog-license lppl
-# catalog-version v0.996
 Name:		texlive-gmutils
-Version:	v0.996
-Release:	10
+Version:	0.996
+Release:	1
 Summary:	Support macros for other packages
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gmutils
@@ -62,17 +56,3 @@ if the argument environment is defined).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> v0.996-2
-+ Revision: 752363
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> v0.996-1
-+ Revision: 718567
-- texlive-gmutils
-- texlive-gmutils
-- texlive-gmutils
-- texlive-gmutils
-

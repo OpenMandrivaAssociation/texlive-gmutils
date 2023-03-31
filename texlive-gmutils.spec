@@ -1,6 +1,6 @@
 Name:		texlive-gmutils
 Version:	24287
-Release:	1
+Release:	2
 Summary:	Support macros for other packages
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gmutils

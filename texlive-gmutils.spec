@@ -3,7 +3,7 @@ Version:	24287
 Release:	2
 Summary:	Support macros for other packages
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gmutils
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/gmutils
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gmutils.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gmutils.doc.r%{version}.tar.xz
